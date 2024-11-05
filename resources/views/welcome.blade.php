@@ -13,10 +13,45 @@
                 /* ! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com */
             </style>
         @endif
+        
+        <!-- Updated scrollbar styles with more specific rules -->
+        <style>
+            /* Hide default scrollbar */
+            .custom-scrollbar {
+                scrollbar-width: none; /* Firefox */
+                -ms-overflow-style: none; /* IE and Edge */
+            }
+
+            .custom-scrollbar::-webkit-scrollbar {
+                width: 4px;
+                height: 4px;
+                background-color: transparent;
+            }
+
+            .custom-scrollbar::-webkit-scrollbar-track {
+                background: rgba(255, 255, 255, 0.4);
+                border-radius: 10px;
+            }
+
+            .custom-scrollbar::-webkit-scrollbar-thumb {
+                background: rgb(147, 51, 234);
+                border-radius: 10px;
+                border: none;
+            }
+
+            .custom-scrollbar::-webkit-scrollbar-corner {
+                background: transparent;
+            }
+
+            /* Ensure the container has padding for the scrollbar */
+            .scrollbar-container {
+                padding-right: 4px;
+            }
+        </style>
     </head>
     <body class="font-sans antialiased">
-        <div class="bg-purple-600 via-purple-800 text-white min-h-screen relative overflow-hidden">
-            <div class="relative w-full max-w-2xl lg:max-w-7xl mx-auto">
+        <div class="bg-gradient-to-b from-purple-600 via-purple-800 to-purple-900 text-white min-h-screen relative overflow-hidden">
+            <div class="relative w-full max-w-[1024px] mx-auto">
                 <header class="flex justify-between items-center py-10 px-24">
                     <h1 class="font-figtree text-4xl font-bold text-white tracking-tight">Audioninja</h1>
                     @if (Route::has('login'))
@@ -29,7 +64,6 @@
                                 <a href="{{ route('login') }}" class="rounded-md px-3 py-2 text-white ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]">
                                     Log in
                                 </a>
-
                                 @if (Route::has('register'))
                                     <a href="{{ route('register') }}" class="rounded-md px-3 py-2 text-white ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]">
                                         Register
@@ -39,6 +73,23 @@
                         </nav>
                     @endif
                 </header>
+
+                <div class="scrollbar-container">
+    <div class="p-24 h-[450px] mx-12 my-2 shadow bg-white rounded-md relative overflow-y-auto custom-scrollbar">
+        <div class="absolute top-0 left-0 right-0 mt-8 flex justify-center">
+            <h1 class="font-figtree text-2xl font-bold text-gray-500 tracking-tight bg-white px-6">
+                Have a listen from our list of recently uploaded samples.
+            </h1>
+        </div>
+        
+        <div class="-ml-12 -mr-12 p-6 h-24 mt-2 bg-gray-300 shadow rounded-md"></div>
+        <div class="-ml-12 -mr-12 p-6 h-24 mt-8 bg-gray-300 shadow rounded-md"></div>
+        <div class="-ml-12 -mr-12 p-6 h-24 mt-8 bg-gray-300 shadow rounded-md"></div>
+        <div class="-ml-12 -mr-12 p-6 h-24 mt-8 bg-gray-300 shadow rounded-md"></div>
+        <div class="-ml-12 -mr-12 p-6 h-24 mt-8 bg-gray-300 shadow rounded-md"></div>
+    </div>
+</div>
+                </div>
             </div>
         </div>
     </body>
