@@ -1,8 +1,8 @@
 <div class="p-6 lg:p-8 bg-white border-b border-gray-200">
-    <x-application-logo class="block h-12 w-auto" />
+    <h2 class=" font-figtree text-4xl font-bold text-black tracking-tight">Audioninja</h2>
 
-    <h1 class="mt-8 text-2xl font-medium text-gray-900">
-        Welcome to Audioninja!
+    <h1 class="mt-6 text-2xl font-medium text-gray-900">
+        Welcome to Audioninja! <br> Browse our samples below... 
     </h1>
 </div>
 <div>
