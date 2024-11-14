@@ -75,7 +75,7 @@
                 </header>
 
                 <div class="scrollbar-container">
-    <div class="p-24 h-[450px] mx-12 my-2 shadow bg-white rounded-md relative overflow-y-auto custom-scrollbar">
+    <div class="p-24 h-[700px] mx-12 my-2 shadow bg-white rounded-md relative overflow-y-auto custom-scrollbar">
         <div class="absolute top-0 left-0 right-0 mt-8 flex justify-center">
             <h1 class="font-figtree text-2xl font-bold text-gray-500 tracking-tight bg-white px-6">
                 Have a listen from our list of recently uploaded samples.
